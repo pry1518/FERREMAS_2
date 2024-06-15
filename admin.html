@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="header">
+        <header> 
+        <div class="container">
+            <div class="row align-items-center py-3">
+                <div class="col-md-2">
+                    <a href="Index.html"><img src="Imagenes/F.png" alt="Logo" class="img-fluid"></a>
+                </div>
+                <div class="col-md-10">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contáctanos</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Modificar Catálogo
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="admin.html"> Modificar Catálogo</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="InicioSesion.html">Iniciar sesión</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="register.html">Registrar usuario</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</header>
+
+
+    <main>
+        <div class="contenedor">
+            <!-- Añadir -->
+            <div class="añadir">
+                <h2>Añadir</h2>
+                <form>
+                    <label>Nombre del producto</label>
+                    <input type="text" id="productoAñadir" name="nombreDelProducto">
+
+                    <label>Valor del producto</label>
+                    <input type="number" id="valorAñadir">
+
+                    <label>Stock</label>
+                    <input type="number" id="existenciaAñadir">
+
+                    <label>Url Imagen</label>
+                    <input type="text" id="ImagenAñadir">
+
+                    <input class="button" type="button" id="botonAñadir" value="Añadir">
+                </form>
+            </div>
+            <!-- Editar -->
+            <div class="editar">
+                <h2>Editar</h2>
+                <form>
+                    <label>Nombre del producto</label>
+                    <select id="productoEditar">
+                        <option value="">---</option>
+                    </select>
+
+                    <label>Atributo</label>
+                    <select id="atributoEditar">
+                        <option value="">---</option>
+                    </select>
+
+                    <label>Nuevo valor</label>
+                    <input type="text" id="nuevoAtributo">
+
+                    <input class="button" type="button" id="botonEditar" value="Editar">
+                </form>
+            </div>
+
+            <!-- Eliminar -->
+            <div class="eliminar">
+                <h2>Eliminar</h2>
+
+                <form>
+                    <label>Nombre del producto</label>
+                    <select id="productoEliminar">
+                        <option value="">---</option>
+                    </select>
+                    <input class="button" type="button" id="botonEliminar" value="Eliminar">
+                </form>
+            </div>
+        </div>
+
+        <!-- Mostrar el mensaje -->
+        <div class="contenedorMensaje">
+            <div id="mensaje"></div>
+        </div>
+
+        <!-- Productos -->
+        <div class="contenedorProductos">
+            <h2>Productos</h2>
+            <div class="mostrarProductos" id="mostrarProductos">
+                
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
